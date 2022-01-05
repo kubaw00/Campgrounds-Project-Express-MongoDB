@@ -1,0 +1,26 @@
+{
+  "name": "campgorundsproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kubaw00/Campgrounds-Project-Express-MongoDB.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kubaw00/Campgrounds-Project-Express-MongoDB/issues"
+  },
+  "homepage": "https://github.com/kubaw00/Campgrounds-Project-Express-MongoDB#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.2",
+    "mongoose": "^5.12.3"
+  }
+}
