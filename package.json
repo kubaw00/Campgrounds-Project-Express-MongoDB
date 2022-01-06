@@ -19,6 +19,7 @@
   "homepage": "https://github.com/kubaw00/Campgrounds-Project-Express-MongoDB#readme",
   "dependencies": {
     "ejs": "^3.1.6",
+    "ejs-mate": "^3.0.0",
     "express": "^4.17.2",
     "method-override": "^3.0.0",
     "mongoose": "^5.12.3"
