@@ -5,9 +5,6 @@ const Review = require('./models/review');
 
 module.exports.isLoggedIn = (req, res, next) => {
   if (!req.isAuthenticated()) {
-    if (!['/login', '/', '/register'].includes(req.originalUrl)) {
-      req.session.returnTo = req.originalUrl;
-    }
     req.flash('error', 'You must be signed in first!');
     return res.redirect('/login');
   }
@@ -16,16 +13,7 @@ module.exports.isLoggedIn = (req, res, next) => {
 
 module.exports.validateCampground = (req, res, next) => {
   const { error } = campgroundSchema.validate(req.body);
-  if (error) {
-    const msg = error.details.map((el) => el.message).join(',');
-    throw new ExpressError(msg, 400);
-  } else {
-    next();
-  }
-};
-
-module.exports.validateReview = (req, res, next) => {
-  const { error } = reviewSchema.validate(req.body);
+  console.log(req.body);
   if (error) {
     const msg = error.details.map((el) => el.message).join(',');
     throw new ExpressError(msg, 400);
@@ -52,4 +40,14 @@ module.exports.isReviewAuthor = async (req, res, next) => {
     return res.redirect(`/campgrounds/${id}`);
   }
   next();
+};
+
+module.exports.validateReview = (req, res, next) => {
+  const { error } = reviewSchema.validate(req.body);
+  if (error) {
+    const msg = error.details.map((el) => el.message).join(',');
+    throw new ExpressError(msg, 400);
+  } else {
+    next();
+  }
 };
