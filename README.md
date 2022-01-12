@@ -1,5 +1,5 @@
 # Campgrounds Project Ejs & MongoDB
- ## [Link to App](https://serene-citadel-76532.herokuapp.com//)
+ ## [Link to App](https://serene-citadel-76532.herokuapp.com/)
 
 > Campgrounds Website
 
