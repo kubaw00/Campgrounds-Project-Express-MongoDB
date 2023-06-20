@@ -1,4 +1,5 @@
 const User = require('../models/user');
+const { storeReturnTo } = require('../middleware');
 
 module.exports.renderRegister = (req, res) => {
   res.render('users/register');
@@ -26,7 +27,7 @@ module.exports.renderLogin = (req, res) => {
 
 module.exports.login = (req, res) => {
   req.flash('success', 'welcome back!');
-  const redirectUrl = req.session.returnTo || '/campgrounds';
+  const redirectUrl = res.locals.returnTo || '/campgrounds';
   delete req.session.returnTo;
   res.redirect(redirectUrl);
 };
