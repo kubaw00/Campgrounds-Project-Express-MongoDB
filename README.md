@@ -1,5 +1,5 @@
 # Campgrounds Project Ejs & MongoDB
- ## [Link to App](https://serene-citadel-76532.herokuapp.com//)
+ ## [Link to App](https://serene-citadel-76532.herokuapp.com/)
 
 > Campgrounds Website
 
@@ -55,4 +55,4 @@ npm start
 
 ## Deploy
 
-If you push to Heroku, need to login to Heroku, create git repository in main project folder, then type 'git heroku master'. Insert environment variables in Heroku. 
+If you push to Heroku, need to login to Heroku, create git repository in main project folder, then type 'git heroku master' in your cli. Insert environment variables in Heroku. 
